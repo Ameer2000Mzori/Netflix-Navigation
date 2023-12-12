@@ -18,7 +18,7 @@
 
 # 📖 About This Project <a name="about-project"></a>
 
-> GitHub Profiles A website built with HTML, SCSS, and TypeScript, utilizing the GitHub API and Axios for seamless data retrieval. Linters are employed to maintain clean code. Explore the live demo to search for any GitHub user.
+> Netflix-Navigation is a website meticulously developed with HTML, SCSS, and TypeScript. Our implementation includes the use of linters to identify and resolve code errors, ensuring the maintenance of clean and efficient code. Feel free to explore the live demo for a firsthand experience.
 
 # Sample Of Website <a name="Sample-Of-Website"></a>
 
