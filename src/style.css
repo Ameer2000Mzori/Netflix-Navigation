@@ -8,7 +8,7 @@ body {
 
 .black-Box {
   height: 100%;
-  width: 50%;
+  width: 70%;
   display: fixed;
   position: absolute;
   top: 0;
@@ -69,10 +69,11 @@ body {
 
 .black-Box .red-Box .navbar .brand-Button-Wrapper #close-Icon {
   font-size: 30px;
+  cursor: pointer;
 }
 
 .black-Box .red-Box .navbar .nav-Links {
-  width: 40%;
+  width: 50%;
   text-align: start;
   align-items: center;
   display: flex;
@@ -117,6 +118,42 @@ body {
   height: 50%;
   width: 10%;
   background-color: red;
+}
+
+@media screen and (max-width: 800px) {
+  .black-Box {
+    width: 70%;
+  }
+
+  .black-Box .red-Box .navbar .brand-Button-Wrapper {
+    text-align: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .black-Box .red-Box .navbar .brand-Button-Wrapper .brand-Img {
+    height: 50px;
+  }
+
+  .black-Box .red-Box .navbar .nav-Links {
+    width: 70%;
+  }
+
+  .black-Box .red-Box .navbar .nav-Links ul {
+    width: 100%;
+  }
+
+  .black-Box .red-Box .navbar .nav-Links ul li {
+    width: 100%;
+  }
+
+  .black-Box .red-Box .navbar .nav-Links ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    color: red;
+  }
 }
 
 .black-Box.active {
