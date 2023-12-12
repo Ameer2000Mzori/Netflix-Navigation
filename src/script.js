@@ -12,10 +12,12 @@ openBtn.addEventListener("click", function () {
     blackBox.classList.add("active");
     redBox.classList.add("active");
     navbar.classList.add("active");
+    openBtn.classList.add("active");
 });
 closeBtn.addEventListener("click", function () {
     console.log("dactivated");
     blackBox.classList.remove("active");
     redBox.classList.remove("active");
     navbar.classList.remove("active");
+    openBtn.classList.remove("active");
 });
