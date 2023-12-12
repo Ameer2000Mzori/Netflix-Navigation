@@ -18,7 +18,9 @@ body {
   left: 0;
   background-color: black;
   transition: all 1350ms ease-in-out;
-  transform: translateX(-100%);
+  animation-name: goBackWard;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 
   .red-Box {
     height: 100%;
@@ -114,31 +116,27 @@ body {
 }
 
 .black-Box.active {
-  animation: goForWard 1s;
+  animation-name: goForWard;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 @keyframes goForWard {
+  from {
+    transform: translateX(-100%);
+  }
+
   to {
     transform: translateX(0%);
   }
 }
 
-// .red-Box.active {
-//   transform: translateX(0%);
-// }
+@keyframes goBackWard {
+  from {
+    transform: translateX(0%);
+  }
 
-// .navbar.active {
-//   transform: translateX(0%);
-// }
-
-// .black-Box:hover {
-//   transform: translateX(-100%);
-// }
-
-// .red-Box:hover {
-//   transform: translateX(-100%);
-// }
-
-// .navbar:hover {
-//   transform: translateX(-100%);
-// }
+  to {
+    transform: translateX(-100%);
+  }
+}

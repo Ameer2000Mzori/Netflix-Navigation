@@ -15,7 +15,9 @@ body {
   left: 0;
   background-color: black;
   transition: all 1350ms ease-in-out;
-  transform: translateX(-100%);
+  animation-name: goBackWard;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .black-Box .red-Box {
@@ -111,11 +113,27 @@ body {
 }
 
 .black-Box.active {
-  animation: goForWard 1s;
+  animation-name: goForWard;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 @keyframes goForWard {
+  from {
+    transform: translateX(-100%);
+  }
+
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes goBackWard {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
   }
 }
