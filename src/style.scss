@@ -6,4 +6,139 @@ $fontTwo: "Silkscreen", sans-serif;
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
+
+.black-Box {
+  height: 100%;
+  width: 40%;
+  display: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transition: all 1350ms ease-in-out;
+  transform: translateX(-100%);
+
+  .red-Box {
+    height: 100%;
+    width: 90%;
+    display: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    transition: all 1300ms ease-in-out;
+    transform: translateX(-100%);
+
+    .navbar {
+      background-color: rgb(224, 223, 223);
+      height: 100%;
+      width: 90%;
+      position: absolute;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      transition: all 1200ms ease-in-out;
+
+      .brand-Button-Wrapper {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+        height: 10%;
+        width: 90%;
+
+        .brand-Img {
+          height: 90px;
+        }
+
+        #close-Icon {
+          font-size: 30px;
+        }
+      }
+
+      .nav-Links {
+        width: 90%;
+        text-align: start;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            position: relative;
+            padding: 1rem;
+            transition: all 500ms ease-in-out;
+
+            a {
+              text-decoration: none;
+              font-size: 20px;
+              font-weight: 500;
+              font-family: $fontOne;
+              color: red;
+            }
+
+            a:active {
+              color: rgb(158, 158, 158);
+            }
+          }
+
+          li:hover {
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: -5%;
+              transform: translate(-10%, -50%);
+              height: 50%;
+              width: 10%;
+              background-color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.black-Box.active {
+  animation: goForWard 1s;
+}
+
+@keyframes goForWard {
+  to {
+    transform: translateX(0%);
+  }
+}
+
+// .red-Box.active {
+//   transform: translateX(0%);
+// }
+
+// .navbar.active {
+//   transform: translateX(0%);
+// }
+
+// .black-Box:hover {
+//   transform: translateX(-100%);
+// }
+
+// .red-Box:hover {
+//   transform: translateX(-100%);
+// }
+
+// .navbar:hover {
+//   transform: translateX(-100%);
+// }

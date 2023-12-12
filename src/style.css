@@ -3,4 +3,119 @@
 body {
   padding: 0;
   margin: 0;
+  overflow: hidden;
+}
+
+.black-Box {
+  height: 100%;
+  width: 40%;
+  display: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  transition: all 1350ms ease-in-out;
+  transform: translateX(-100%);
+}
+
+.black-Box .red-Box {
+  height: 100%;
+  width: 90%;
+  display: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  transition: all 1300ms ease-in-out;
+  transform: translateX(-100%);
+}
+
+.black-Box .red-Box .navbar {
+  background-color: rgb(224, 223, 223);
+  height: 100%;
+  width: 90%;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  transition: all 1200ms ease-in-out;
+}
+
+.black-Box .red-Box .navbar .brand-Button-Wrapper {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 90%;
+}
+
+.black-Box .red-Box .navbar .brand-Button-Wrapper .brand-Img {
+  height: 90px;
+}
+
+.black-Box .red-Box .navbar .brand-Button-Wrapper #close-Icon {
+  font-size: 30px;
+}
+
+.black-Box .red-Box .navbar .nav-Links {
+  width: 90%;
+  text-align: start;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.black-Box .red-Box .navbar .nav-Links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.black-Box .red-Box .navbar .nav-Links ul li {
+  position: relative;
+  padding: 1rem;
+  transition: all 500ms ease-in-out;
+}
+
+.black-Box .red-Box .navbar .nav-Links ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: red;
+}
+
+.black-Box .red-Box .navbar .nav-Links ul li a:active {
+  color: rgb(158, 158, 158);
+}
+
+.black-Box .red-Box .navbar .nav-Links ul li:hover {
+  cursor: pointer;
+}
+
+.black-Box .red-Box .navbar .nav-Links ul li:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translate(-10%, -50%);
+  height: 50%;
+  width: 10%;
+  background-color: red;
+}
+
+.black-Box.active {
+  animation: goForWard 1s;
+}
+
+@keyframes goForWard {
+  to {
+    transform: translateX(0%);
+  }
 }
