@@ -11,7 +11,7 @@ body {
 
 .black-Box {
   height: 100%;
-  width: 40%;
+  width: 50%;
   display: fixed;
   position: absolute;
   top: 0;
@@ -19,7 +19,7 @@ body {
   background-color: black;
   transition: all 1350ms ease-in-out;
   animation-name: goBackWard;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
 
   .red-Box {
@@ -32,11 +32,14 @@ body {
     background-color: red;
     transition: all 1300ms ease-in-out;
     transform: translateX(-100%);
+    animation-name: goBackWard;
+    animation-duration: 1.4s;
+    animation-fill-mode: both;
 
     .navbar {
-      background-color: rgb(224, 223, 223);
+      background-color: rgb(187, 187, 187);
       height: 100%;
-      width: 90%;
+      width: 100%;
       position: absolute;
       text-align: center;
       align-items: center;
@@ -44,7 +47,11 @@ body {
       flex-direction: column;
       top: 0;
       left: 0;
-      transition: all 1200ms ease-in-out;
+      transition: all 1500ms ease-in-out;
+      animation-name: goBackWard;
+      animation-duration: 1.3s;
+      animation-fill-mode: both;
+      z-index: 10;
 
       .brand-Button-Wrapper {
         display: flex;
@@ -53,7 +60,7 @@ body {
         align-items: center;
         justify-content: space-between;
         height: 10%;
-        width: 90%;
+        width: 50%;
 
         .brand-Img {
           height: 90px;
@@ -65,7 +72,7 @@ body {
       }
 
       .nav-Links {
-        width: 90%;
+        width: 40%;
         text-align: start;
         align-items: center;
         display: flex;
@@ -117,8 +124,20 @@ body {
 
 .black-Box.active {
   animation-name: goForWard;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
+
+  .red-Box.active {
+    animation-name: redBoxAni;
+    animation-duration: 1.4s;
+    animation-fill-mode: both;
+
+    .navbar.active {
+      animation-name: navBarAni;
+      animation-duration: 1.3s;
+      animation-fill-mode: both;
+    }
+  }
 }
 
 @keyframes goForWard {
@@ -128,6 +147,26 @@ body {
 
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes redBoxAni {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes navBarAni {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(-10%);
   }
 }
 
